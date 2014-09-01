@@ -1,0 +1,16 @@
+---
+- name: be sure common packages are installed
+  yum: name={{item}} state=installed
+  with_items:
+    - libselinux-python
+    - ntp
+    - bind-utils
+    - autoconf
+    - automake
+    - bison
+    - curl
+    - git-core
+    - vim
+    - libtool
+    - openssl
+  tags: common-packages
