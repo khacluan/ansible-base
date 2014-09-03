@@ -5,12 +5,22 @@
     - libselinux-python
     - ntp
     - bind-utils
+    - gcc-c++ 
+    - patch 
+    - readline 
+    - readline-devel
+    - zlib
+    - zlib-devel
+    - libyaml-devel
+    - libffi-devel
+    - openssl-devel
+    - make
+    - bzip2
     - autoconf
     - automake
+    - libtool
     - bison
     - curl
     - git-core
     - vim
-    - libtool
-    - openssl
   tags: common-packages

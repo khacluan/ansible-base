@@ -1,3 +1,7 @@
 ---
-- include: common.yml
-- include: nginx.yml
+- hosts: test
+  sudo: yes
+  roles:
+#    - common
+#    - nginx
+    - rbenv
