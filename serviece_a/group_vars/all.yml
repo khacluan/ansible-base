@@ -1,0 +1,5 @@
+rbenv_root: /usr/local/rbenv
+ruby_version: 2.1.1
+group: rbenv
+rbenv_env: RBENV_ROOT={{ rbenv_root}} PATH=/usr/local/bin:{{ rbenv_root }}/shims:{{ rbenv_root }}/bin:$PATH
+rbenv_bin: "{{ rbenv_env }} rbenv"

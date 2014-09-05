@@ -1,7 +1,0 @@
----
-- hosts: test
-  sudo: yes
-  roles:
-    - common
-    - nginx
-    - rbenv
