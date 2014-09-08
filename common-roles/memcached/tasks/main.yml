@@ -1,0 +1,7 @@
+- name: be sure memcached is installled 
+  yum: name=memcached state=latest
+  tags: redis
+
+- name: be sure memcached is running and enabled
+  service: name=memcached state=running enabled=yes
+  tags: redis

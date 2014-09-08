@@ -1,0 +1,7 @@
+- name: be sure redis is installled 
+  yum: name=redis state=latest
+  tags: redis
+
+- name: be sure redis is running and enabled
+  service: name=redis state=running enabled=yes
+  tags: redis

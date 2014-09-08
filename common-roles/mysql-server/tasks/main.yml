@@ -1,0 +1,9 @@
+- name: be sure mysql-server is installled 
+  yum: name=mysql state=latest
+  yum: name=mysql-devel state=latest
+  yum: name=mysql-server state=latest
+  tags: mysql-server
+
+- name: be sure mysql-server is running and enabled
+  service: name=mysqld state=running enabled=yes
+  tags: mysql-server

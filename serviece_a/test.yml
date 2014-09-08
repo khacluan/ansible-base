@@ -1,4 +1,3 @@
----
 - hosts: app
   sudo: yes
   vars_files:
@@ -6,6 +5,7 @@
     - group_vars/all.yml
   roles:
     - ../common-roles/base
-    - ../common-roles/nginx
-    - ../common-roles/rbenv
-    - nginx-config
+   # - ../common-roles/nginx
+   # - ../common-roles/rbenv
+    - ../common-roles/mongodb
+   # - nginx-config
