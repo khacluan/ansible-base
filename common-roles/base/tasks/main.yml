@@ -1,5 +1,5 @@
 ---
 - include: epel.yml
+- include: remi.yml
 - include: common-packages.yml
-#- include: sshd.yml
 - include: ntp.yml

@@ -4,3 +4,6 @@ test-server
 [db]
 test-server
 
+[cache]
+test-server
+

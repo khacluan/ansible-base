@@ -4,10 +4,11 @@
     - ../vars/common.yml
     - group_vars/all.yml
   roles:
-    #- ../common-roles/base
-    #- ../common-roles/nginx
-    #- ../common-roles/rbenv
-    #- nginx-config
+    - ../common-roles/base
+    - ../common-roles/nginx
+    - ../common-roles/rbenv
+    - ../common-roles/memcached
+    - nginx-config
 
 - hosts: db
   sudo: yes
@@ -16,5 +17,14 @@
     - group_vars/all.yml
   roles:
     - ../common-roles/base
-    #- ../common-roles/mongodb
+    - ../common-roles/mongodb
     - ../common-roles/mysql-server
+
+- hosts: cache
+  sudo: yes
+  vars_files:
+    - ../vars/common.yml
+    - group_vars/all.yml
+  roles:
+    - ../common-roles/base
+    - ../common-roles/redis
