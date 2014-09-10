@@ -17,8 +17,17 @@
     - group_vars/all.yml
   roles:
     - ../common-roles/base
-    - ../common-roles/mongodb
     - ../common-roles/mysql-server
+    - mysql-server-config
+
+- hosts: mongodb
+  sudo: yes
+  vars_files:
+    - ../vars/common.yml
+    - group_vars/all.yml
+  roles:
+    - ../common-roles/base
+    - ../common-roles/mongodb
 
 - hosts: cache
   sudo: yes

@@ -4,6 +4,9 @@ test-server
 [db]
 test-server
 
+[mongodb]
+test-server
+
 [cache]
 test-server
 

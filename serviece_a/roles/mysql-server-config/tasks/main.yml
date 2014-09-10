@@ -1,0 +1,4 @@
+- name: mysql server config | set my.cnf
+  template: src=my.cnf.j2 dest=/etc/my.cnf owner=root group=root mode=0644
+  tags: mysql-server-config
+
