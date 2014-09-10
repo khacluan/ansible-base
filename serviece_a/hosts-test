@@ -1,2 +1,6 @@
 [app]
 test-server
+
+[db]
+test-server
+

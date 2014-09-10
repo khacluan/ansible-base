@@ -1,3 +1,8 @@
+---
+- name: download mysql rpms
+  command: rpm -Uvh --force http://dev.mysql.com/get/mysql-community-release-el6-5.noarch.rpm
+  ignore_errors: yes
+
 - name: be sure mysql-server is installled 
   yum: name=mysql state=latest
   yum: name=mysql-devel state=latest
@@ -5,5 +10,5 @@
   tags: mysql-server
 
 - name: be sure mysql-server is running and enabled
-  service: name=mysqld state=running enabled=yes
+  service: name=mysqld enabled=yes
   tags: mysql-server
